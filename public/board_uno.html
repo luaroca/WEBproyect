@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Comprador</title>
+    <link rel="stylesheet" href="dashboard_comprador.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="dashboard-card">
+            <div class="imagen-usuario">
+                <img alt="Usuario" id="imagen_usuario">
+            </div>
+
+            <div class="botones">
+                <button>Consultar Productos</button>
+                <button>Editar Perfil</button>
+                <button>Cerrar Sesión</button>
+            </div>
+
+            <div class="info-usuario">
+                <p><strong>Cédula: </strong> <span id="cedula"></span></p>
+                <p><strong>Nombre: </strong> <span id="nombre"></span></p>
+                <p><strong>Correo: </strong> <span id="correo"></span></p>
+                <p><strong>Teléfono: </strong> <span id="telefono"></span></p>
+                <p><strong>Rol: </strong> <span id="rol"></span></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Función para obtener parámetros de la URL
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        async function cargarPerfil() {
+            const userId = getQueryParam('id'); // obtiene ?id=123 de la URL
+            if (!userId) {
+                alert('No se especificó el ID de usuario en la URL.');
+                return;
+            }
+
+            try {
+                const res = await fetch(`/perfil/${userId}`);
+                const data = await res.json();
+
+                if (res.ok && data.success) {
+                    const usuario = data.usuario;
+                    document.getElementById('cedula').textContent = usuario.cedula || 'N/A';
+                    document.getElementById('nombre').textContent = usuario.nombre || 'N/A';
+                    document.getElementById('correo').textContent = usuario.correo || 'N/A';
+                    document.getElementById('telefono').textContent = usuario.telefono || 'N/A';
+                    document.getElementById('rol').textContent = usuario.rol || 'N/A';
+
+                    document.getElementById('imagen_usuario').src = `/perfil/${userId}/imagen`;
+                } else {
+                    alert(data.message || 'No se encontró el usuario.');
+                }
+                conts
+            } catch (error) {
+                alert('Error al conectar con el servidor.');
+                console.error(error);
+            }
+        }
+
+        // Ejecutar al cargar la página
+        window.addEventListener('DOMContentLoaded', cargarPerfil);
+    </script>
+
+</body>
+
+</html>

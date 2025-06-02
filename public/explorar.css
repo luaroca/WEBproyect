@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f7fafd;
+  color: #333;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background-color: #226776;
+  color: white;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+nav a {
+  margin-left: 15px;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn {
+  background-color: white;
+  color: #226776;
+}
+
+.btn-outline {
+  border: 1px solid white;
+  color: white;
+}
+
+.btn:hover {
+  background-color: #5594a3;
+  color: white;
+}
+
+.hero {
+  text-align: center;
+  padding: 80px 30px 40px;
+  background: linear-gradient(to right, #b9e6f2, #f0fbff);
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  padding: 60px 30px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  max-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #226776;
+}
+
+.cta {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #e0f7fc;
+}
+
+.cta h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.btn-large {
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  background-color: #226776;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-large:hover {
+  background-color: #5594a3;
+}

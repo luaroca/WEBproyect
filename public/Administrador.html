@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración</title>
+    <link rel="stylesheet" href="Administrador.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <h2>Admin</h2>
+        <a href="#" onclick="mostrar('inicio')">Inicio</a>
+        <a href="#" onclick="mostrar('usuarios')">Usuarios</a>
+        <a href="#" onclick="mostrar('reportes')">Reportes</a>
+        <a href="#" onclick="mostrar('ajustes')">Ajustes</a>
+    </div>
+
+    <div class="main">
+        <div class="navbar">
+            <span>Panel de Administración</span>
+            <span>Bienvenido, Admin</span>
+        </div>
+
+        <div class="content" id="contenido">
+            <!-- Contenido dinámico -->
+            <div class="card">
+                <h3>Inicio</h3>
+                <p>Bienvenido al panel de administración.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function mostrar(seccion) {
+            const contenido = document.getElementById('contenido');
+            let html = '';
+
+            switch (seccion) {
+                case 'inicio':
+                    html = `<div class="card"><h3>Inicio</h3><p>Bienvenido al panel de administración.</p></div>`;
+                    break;
+                case 'usuarios':
+                    html = `<div class="card"><h3>Gestión de Usuarios</h3><p>Lista, editar y eliminar usuarios aquí.</p></div>`;
+                    break;
+                case 'reportes':
+                    html = `<div class="card"><h3>Reportes</h3><p>Estadísticas, gráficos y más.</p></div>`;
+                    break;
+                case 'ajustes':
+                    html = `<div class="card"><h3>Ajustes</h3><p>Configuración general del sistema.</p></div>`;
+                    break;
+                default:
+                    html = `<div class="card"><h3>Error</h3><p>Sección no encontrada.</p></div>`;
+            }
+
+            contenido.innerHTML = html;
+        }
+    </script>
+</body>
+
+</html>

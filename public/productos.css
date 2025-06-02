@@ -1,0 +1,65 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+}
+
+.navbar-custom {
+    background-color: #1f4e60;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #226776, #5594a3);
+}
+
+.card {
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.badge {
+    font-size: 0.85rem;
+}
+
+.custom-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    display: inline-block;
+}
+
+/* Estilo tipo "glass" */
+.custom-btn.primary {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    backdrop-filter: blur(10px);
+}
+
+.custom-btn.primary:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Estilo con borde blanco */
+.custom-btn.outline {
+    border-color: rgba(255, 255, 255, 0.3);
+    color: white;
+}
+
+.custom-btn.outline:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: white;
+}

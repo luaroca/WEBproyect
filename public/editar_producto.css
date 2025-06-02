@@ -1,0 +1,215 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: url('https://d1ih8jugeo2m5m.cloudfront.net/2024/07/Poder-de-negociacion-de-los-proveedores.jpg') no-repeat center center / cover;
+  min-height: 100vh;
+  padding: 30px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.container {
+  max-width: 800px;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #1F4E60;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.form-section {
+  margin-bottom: 40px;
+}
+
+.form-section-title {
+  font-size: 1.25rem;
+  color: #226776;
+  margin-bottom: 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.form-label {
+  font-weight: 500;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.required {
+  color: red;
+  font-weight: bold;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.form-row .mb-3 {
+  flex: 1 1 45%;
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.file-input-container {
+  border: 2px dashed #ccc;
+  padding: 30px;
+  text-align: center;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: border-color 0.3s;
+  background-color: #f9f9f9;
+}
+
+.file-input-container:hover {
+  border-color: #226776;
+}
+
+.file-input-label {
+  display: block;
+  color: #555;
+  font-weight: 500;
+}
+
+.file-input-text {
+  display: block;
+  margin-top: 10px;
+}
+
+.file-input {
+  display: none;
+}
+
+.file-preview {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.file-preview-item {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  position: relative;
+}
+
+.file-preview-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-icon {
+  color: #888;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: 200px;
+  background-color: #333;
+  color: #fff;
+  font-size: 0.875rem;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -100px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.btn-primary {
+  background-color: #226776;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 500;
+}
+
+.btn-primary:hover {
+  background-color: #1F4E60;
+}
+
+.btn-outline-secondary {
+  border-radius: 30px;
+  padding: 8px 24px;
+  color: #226776;
+  border: 2px solid #226776;
+  font-weight: 500;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #226776;
+  color: #fff;
+}
+
+.form-actions {
+  margin-top: 30px;
+}
+
+/* Estilo para el select de categoría */
+select#categoria,
+select.categoria, /* en caso de que uses clase en lugar de id */
+select.form-select.categoria {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  background-color: #f9f9f9;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  appearance: none; /* quita estilos nativos para personalizar */
+  cursor: pointer;
+  box-shadow: none;
+}
+
+select#categoria:focus,
+select.categoria:focus,
+select.form-select.categoria:focus {
+  outline: none;
+  border-color: #226776;
+  box-shadow: 0 0 8px rgba(34, 103, 118, 0.4);
+  background-color: #fff;
+}
+
+/* Agregar un ícono de flecha personalizado al select, opcional */
+select#categoria {
+  background-image: url("data:image/svg+xml,%3Csvg fill='none' stroke='%23226776' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px 16px;
+  padding-right: 40px; /* espacio para la flecha */
+}

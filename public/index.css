@@ -1,0 +1,66 @@
+:root {
+  --beige-claro: #F5D1AF;
+  --azul-petroleo: #1F4E60;
+  --turquesa-oscuro: #226776;
+  --hover-turquesa: #5594A3;
+  --gris-texto: #3e3e3e;
+}
+
+body {
+  background-color: var(--beige-claro);
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--gris-texto);
+  scroll-behavior: smooth;
+}
+
+.bg-azul {
+  background-color: var(--azul-petroleo) !important;
+}
+
+.text-turquesa {
+  color: var(--turquesa-oscuro);
+}
+
+.btn-turquesa {
+  background-color: var(--turquesa-oscuro);
+  color: white;
+  border-radius: 50px;
+  padding: 10px 25px;
+  transition: 0.3s ease;
+  border: none;
+}
+
+.btn-turquesa:hover {
+  background-color: var(--hover-turquesa);
+  color: white;
+}
+
+.hero-section {
+  height: 100vh;
+  background: linear-gradient(to right, rgba(31, 78, 96, 0.85), rgba(34, 103, 118, 0.85)),
+              url('https://d1ih8jugeo2m5m.cloudfront.net/2024/07/Poder-de-negociacion-de-los-proveedores.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 70px;
+}
+
+.feature-card,
+.step-card {
+  background: white;
+  border: none;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.bg-opacity-50 {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.feature-card:hover,
+.step-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+

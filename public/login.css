@@ -1,0 +1,159 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: url('https://d1ih8jugeo2m5m.cloudfront.net/2024/07/Poder-de-negociacion-de-los-proveedores.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-login {
+  width: 100%;
+  padding: 15px 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  background-color: rgba(34, 103, 118, 0.8);
+  padding: 8px 16px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.logo:hover {
+  background-color: rgba(85, 148, 163, 0.9);
+}
+
+.login-container {
+  width: 90%;
+  max-width: 900px;
+  height: 500px;
+  margin-top: 80px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 25px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  display: flex;
+  overflow: hidden;
+  animation: fadeIn 1s ease-in;
+}
+
+.login-left, .login-right {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-left {
+  background-color: #B9E6F2;
+  text-align: center;
+}
+
+.login-left h2 {
+  font-weight: 700;
+  color: #1F4E60;
+}
+
+.login-left p {
+  margin: 20px 0;
+  color: #333;
+}
+
+.login-left a.btn {
+  border: 2px solid #226776;
+  color: #226776;
+  transition: 0.3s;
+}
+
+.login-left a.btn:hover {
+  background-color: #226776;
+  color: white;
+}
+
+.login-right h3 {
+  font-weight: 600;
+  color: #1F4E60;
+  margin-bottom: 20px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.social-icons button {
+  border: none;
+  background-color: #e6e6e6;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 18px;
+  color: #1F4E60;
+  transition: transform 0.3s ease;
+}
+
+.social-icons button:hover {
+  transform: scale(1.1);
+  background-color: #5594A3;
+  color: white;
+}
+
+.form-control {
+  border-radius: 20px;
+  margin-bottom: 15px;
+  padding: 12px 20px;
+  border: 1px solid #ccc;
+}
+
+.btn-login {
+  background-color: #226776;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+  background-color: #5594A3;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .login-left, .login-right {
+    padding: 30px 20px;
+  }
+
+  .header-login {
+    justify-content: center;
+  }
+}

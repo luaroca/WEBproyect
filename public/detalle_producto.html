@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detalle del Producto | Provecta</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="detalle_producto.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <a href="index.html" class="logo">Provecta</a>
+        <div class="search-container">
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar productos industriales..." />
+                <button>🔍</button>
+            </div>
+        </div>
+        <nav class="nav-links">
+            <a id="btn-x" href="" class="nav-btn primary"></a>
+            <a id="btn-x2" href="" class="nav-btn outline"></a>
+        </nav>
+    </header>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <button id="btn-volver"></button>
+        <div class="product-section">
+            <div class="product-grid">
+                <!-- Gallery -->
+                <div class="gallery-container">
+                    <div class="thumbnail-grid">
+                        <img class="thumbnail active" id="img_1" alt="Vista 1">
+                        <img class="thumbnail" id="img_2" alt="Vista 2">
+                        <img class="thumbnail" id="img_3" alt="Vista 3">
+                    </div>
+                    <div class="main-image-container">
+                        <img class="main-image" id="imagen_principal"
+                            src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800"
+                            alt="Motor Industrial">
+                        <div class="image-overlay">
+                            <button class="overlay-btn" title="Zoom">🔍</button>
+                            <button id="btn-compartir" class="overlay-btn" title="Compartir">📤</button>
+                            <button id="btn-favoritos" class="overlay-btn" title="Favorito">❤️</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Details -->
+                <div class="product-details">
+                    <div class="details-header">
+                        <h2 class="details-title" id="nombre">Motor Industrial XYZ-2000</h2>
+                        <p class="details-subtitle">Proveedor de confianza certificado</p>
+                    </div>
+
+                    <div class="price-section">
+                        <div class="current-price" id="precio"></div>
+                        <div class="old-price" id="precio_anterior"></div>
+                        <div class="savings" id="porcentaje_descuento"></div>
+                    </div>
+
+                    <div class="details-grid">
+                        <div class="detail-item">
+                            <span class="detail-label">Proveedor</span>
+                            <span class="detail-value" id="proveedor"></span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Unidad</span>
+                            <span class="detail-value" id="unidad_medida">Unidad</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Origen</span>
+                            <span class="detail-value" id="origen_producto">Colombia</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Entrega</span>
+                            <span class="detail-value" id="tiempo_entrega">15-20 días hábiles</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Stock</span>
+                            <span class="detail-value" id="stock">25 unidades</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Mín. Pedido</span>
+                            <span class="detail-value" id="minimo_pedido">1 unidad</span>
+                        </div>
+                    </div>
+
+                    <button id="cta-button" class="cta-button">
+                        💬 Contactar Proveedor
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Sections -->
+        <div class="bottom-sections">
+            <!-- Related Products -->
+            <div class="section-card">
+                <div class="section-header">
+                    <h3 class="section-title">Productos Relacionados</h3>
+                    <p class="section-subtitle">Otros productos que podrían interesarte</p>
+                </div>
+                <div class="related-products-scroll" id="related-products">
+                    <!-- Products will be loaded here -->
+                </div>
+            </div>
+
+            <!-- Reviews Section -->
+            <div class="section-card">
+                <div class="section-header">
+                    <h3 class="section-title">Calificaciones y Opiniones</h3>
+                    <p class="section-subtitle">Lo que dicen nuestros clientes</p>
+                </div>
+
+                <div class="reviews-summary">
+                    <div class="rating-overview">
+                        <div class="rating-score"></div>
+                        <div class="rating-stars"></div>
+                        <div class="rating-label"></div>
+                    </div>
+                    <div class="rating-bars">
+                        <div class="rating-bar-item">
+                            <span>5 ★</span>
+                            <div class="rating-bar">
+                                <div class="rating-bar-fill" id="bar-5"></div>
+                            </div>
+                            <span id="porcentaje_5"></span>
+                        </div>
+                        <div class="rating-bar-item">
+                            <span>4 ★</span>
+                            <div class="rating-bar">
+                                <div class="rating-bar-fill" id="bar-4"></div>
+                            </div>
+                            <span id="porcentaje_4"></span>
+                        </div>
+                        <div class="rating-bar-item">
+                            <span>3 ★</span>
+                            <div class="rating-bar">
+                                <div class="rating-bar-fill" id="bar-3"></div>
+                            </div>
+                            <span id="porcentaje_3"></span>
+                        </div>
+                        <div class="rating-bar-item">
+                            <span>2 ★</span>
+                            <div class="rating-bar">
+                                <div class="rating-bar-fill" id="bar-2"></div>
+                            </div>
+                            <span id="porcentaje_2"></span>
+                        </div>
+                        <div class="rating-bar-item">
+                            <span>1 ★</span>
+                            <div class="rating-bar">
+                                <div class="rating-bar-fill" id="bar-1"></div>
+                            </div>
+                            <span id="porcentaje_1"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NUEVA SECCIÓN: Formulario para crear reseña -->
+                <div class="create-review-section" id="create-review-section">
+                    <div class="create-review-header">
+                        <h4>Escribe tu reseña</h4>
+                        <p>Comparte tu experiencia con este producto</p>
+                    </div>
+                    
+                    <form id="form-nueva-resena" class="create-review-form">
+                        <div class="form-group">
+                            <label for="calificacion-nueva">Calificación *</label>
+                            <div class="star-rating-input" id="star-rating-input">
+                                <span class="star-input" data-rating="1">☆</span>
+                                <span class="star-input" data-rating="2">☆</span>
+                                <span class="star-input" data-rating="3">☆</span>
+                                <span class="star-input" data-rating="4">☆</span>
+                                <span class="star-input" data-rating="5">☆</span>
+                            </div>
+                            <input type="hidden" id="calificacion-nueva" name="calificacion" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="comentario-nuevo">Comentario *</label>
+                            <textarea 
+                                id="comentario-nuevo" 
+                                name="comentario" 
+                                placeholder="Describe tu experiencia con este producto..."
+                                rows="4"
+                                maxlength="500"
+                                required></textarea>
+                            <div class="character-count">
+                                <span id="char-count">0</span>/500 caracteres
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" id="btn-cancelar-resena" class="btn-secondary">
+                                Cancelar
+                            </button>
+                            <button type="submit" id="btn-enviar-resena" class="btn-primary">
+                                <span class="btn-text">Publicar Reseña</span>
+                                <span class="btn-loading" style="display: none;">
+                                    <span class="spinner"></span> Enviando...
+                                </span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Botón para mostrar formulario de reseña -->
+                <div class="review-actions">
+                    <button id="btn-escribir-resena" class="btn-write-review">
+                        ✍️ Escribir una reseña
+                    </button>
+                </div>
+
+                <div class="reviews-list" id="reviews-list">
+                    <!-- Reviews will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast para notificaciones -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- Incluir el archivo JavaScript separado -->
+    <script src="detalle_producto.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Provecta - Plataforma de conexión</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-azul fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Provecta</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navContent">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+          <li class="nav-item">
+            <a href="login.html" class="nav-link text-white">Iniciar Sesión</a>
+          </li>
+          <li class="nav-item"><a class="nav-link btn btn-outline-light ms-2" href="registro.html">Crear cuenta</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Slider -->
+  <section class="swiper">
+    <div class="swiper-wrapper">
+      <!-- Slide 1 -->
+      <div class="swiper-slide">
+        <div class="container">
+          <div class="slide-content">
+            <span class="slide-content__subtitle">Conecta y Crece</span>
+            <h2 class="slide-content__title">Tu red de negocios B2B</h2>
+            <p class="slide-content__text">
+              Únete a una plataforma que une proveedores y compradores al por mayor en toda Colombia. Publica, negocia y
+              expande tu negocio fácilmente.
+            </p>
+            <div class="slide-content__buttons">
+              <a class="button" href="registro.html">Comienza ahora</a>
+            </div>
+          </div>
+        </div>
+        <div class="slide-bg">
+          <img src="img/slider_8.jpg" alt="Conexión empresarial">
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="swiper-slide">
+        <div class="container">
+          <div class="slide-content">
+            <span class="slide-content__subtitle">Para Proveedores</span>
+            <h2 class="slide-content__title">Publica tus productos</h2>
+            <p class="slide-content__text">
+              Muestra tu catálogo a cientos de compradores potenciales. Publicar es fácil y rápido.
+            </p>
+            <div class="slide-content__buttons">
+              <a class="button" href="registro.html">Soy proveedor</a>
+            </div>
+          </div>
+        </div>
+        <div class="slide-bg">
+          <img src="img/slider_4.jpg" alt="Productos mayoristas">
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="swiper-slide">
+        <div class="container">
+          <div class="slide-content">
+            <span class="slide-content__subtitle">Para Compradores</span>
+            <h2 class="slide-content__title">Encuentra lo que tu negocio necesita</h2>
+            <p class="slide-content__text">
+              Explora productos al por mayor de diversos proveedores y contacta directamente para cerrar acuerdos.
+            </p>
+            <div class="slide-content__buttons">
+              <a class="button" href="registro.html">Soy comprador</a>
+            </div>
+          </div>
+        </div>
+        <div class="slide-bg">
+          <img src="img/slider_10.png" alt="Compra para tu tienda">
+        </div>
+      </div>
+    </div>
+
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </section>
+
+
+  <!-- Sección Características -->
+  <section class="features py-5 text-center">
+    <div class="container">
+      <h2 class="mb-5">¿Qué ofrece Provecta?</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card feature-card h-100">
+            <div class="card-body">
+              <i class="fas fa-box-open fa-3x mb-3 text-turquesa"></i>
+              <h5 class="card-title">Publicación de Productos</h5>
+              <p class="card-text">Los proveedores pueden mostrar sus productos con facilidad.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card feature-card h-100">
+            <div class="card-body">
+              <i class="fas fa-search fa-3x mb-3 text-turquesa"></i>
+              <h5 class="card-title">Búsqueda Eficiente</h5>
+              <p class="card-text">Los compradores pueden encontrar rápidamente lo que necesitan.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card feature-card h-100">
+            <div class="card-body">
+              <i class="fas fa-handshake fa-3x mb-3 text-turquesa"></i>
+              <h5 class="card-title">Negociación Directa</h5>
+              <p class="card-text">Facilitamos el contacto directo entre las partes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección ¿Cómo funciona? -->
+  <section class="how-it-works py-5 bg-light text-center">
+    <div class="container">
+      <h2 class="mb-5">¿Cómo funciona?</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card step-card h-100">
+            <div class="card-body">
+              <i class="fas fa-user-plus fa-3x mb-3 text-turquesa"></i>
+              <h5 class="card-title">1. Regístrate</h5>
+              <p class="card-text">Crea una cuenta como proveedor o comprador según tu rol en el negocio.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card step-card h-100">
+            <div class="card-body">
+              <i class="fas fa-store fa-3x mb-3 text-turquesa"></i>
+              <h5 class="card-title">2. Publica o Explora</h5>
+              <p class="card-text">Sube tus productos si eres proveedor o explora catálogos si eres comprador.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card step-card h-100">
+            <div class="card-body">
+              <i class="fas fa-comments fa-3x mb-3 text-turquesa"></i>
+              <h5 class="card-title">3. Conecta y Negocia</h5>
+              <p class="card-text">Contacta directamente y cierra negocios sin intermediarios.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="position-relative text-white d-flex align-items-center justify-content-center"
+    style="height: 100vh; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/banner_extra21.png') center/cover no-repeat;">
+    <div class="container text-center">
+      <h2 class="display-5 fw-bold mb-5">
+        Negocia con seguridad: desde la calidad de los productos<br>hasta la protección de tus compras
+      </h2>
+      <div class="row justify-content-center g-4">
+        <!-- Tarjeta 1 -->
+        <div class="col-md-5">
+          <div class="bg-dark bg-opacity-50 p-4 rounded-4 text-start shadow-lg">
+            <h6 class="text-white-50 mb-2">Verifica la calidad de los proveedores con</h6>
+            <h3 class="fw-bold mb-3">PROVECTA</h3>
+            <p>
+              Encuentra proveedores confiables y verificados con historial comprobado. Provecta te permite identificar
+              productores con buenas prácticas y experiencia para asegurar el abastecimiento de tu negocio.
+            </p>
+            <div class="d-flex gap-3 align-items-center mt-3">
+              <a href="#" class="btn btn-outline-light rounded-pill px-4"><i class="fas fa-play"></i> Registarse</a>
+              <a href="#" class="text-white fw-semibold text-decoration-underline">Conoce cómo funciona</a>
+            </div>
+          </div>
+        </div>
+        <!-- Tarjeta 2 -->
+        <div class="col-md-5">
+          <div class="bg-dark bg-opacity-50 p-4 rounded-4 text-start shadow-lg">
+            <h6 class="text-white-50 mb-2">Compra con respaldo en</h6>
+            <h3 class="fw-bold mb-3"><i class="fas fa-shield-alt text-warning me-2"></i>PROVECTA</h3>
+            <p>
+              Realiza pedidos con total tranquilidad gracias a nuestros sistemas de pago seguros, protección frente a
+              entregas defectuosas o tardías, y soporte para resolver disputas entre comprador y proveedor.
+            </p>
+            <div class="d-flex gap-3 align-items-center mt-3">
+              <a href="#" class="btn btn-outline-light rounded-pill px-4"><i class="fas fa-play"></i> Explorar
+                Provecta</a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <!-- Footer -->
+  <footer class="bg-azul text-white text-center py-4">
+    <p class="mb-0">© 2025 Provecta. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- JS Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      direction: 'horizontal',
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Actualizar Imagen</title>
+</head>
+
+<body>
+    <h2>Actualizar Imagen del Usuario (ID 1)</h2>
+
+    <form action="/actualizar-imagen/1" method="POST" enctype="multipart/form-data">
+        <input type="file" name="imagen" accept="image/*" required />
+        <button type="submit">Actualizar Imagen</button>
+    </form>
+    <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=&to=bdguerra@unicesar.edu.co"
+        target="_blank">
+        Enviar correo a Gmail
+    </a>
+    <h3>Imagen actual:</h3>
+    <img src="/imagen/1" alt="Imagen de usuario" style="max-width: 300px; margin-top: 10px;" />
+</body>
+
+</html>
